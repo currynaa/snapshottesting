@@ -2,7 +2,7 @@
 import boto3
 import json
 import pandas as pd
-from pandas import json_normalize
+from pandas.io.json import json_normalize
 
 ebs = boto3.client('ebs', region_name='us-east-2')
 ec2 = boto3.client('ec2', region_name='us-east-2')
