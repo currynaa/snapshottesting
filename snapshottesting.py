@@ -4,8 +4,8 @@ import json
 import pandas as pd
 from pandas.io.json import json_normalize
 
-ebs = boto3.client('ebs', region_name='us-east-2')
-ec2 = boto3.client('ec2', region_name='us-east-2')
+ebs = boto3.client('ebs', region_name='us-east-1')
+ec2 = boto3.client('ec2', region_name='us-east-1')
 
 # get sorted list of snapshots
 snapshots = ec2.describe_snapshots(OwnerIds=['self'])
